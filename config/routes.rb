@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     end
   end
   
-  post '/payload', to: 'webhooks#payload', constraints: { format: 'json' }
-  get '/', to: 'webhooks#index'
-  get 'webhook', to: 'webhook#webhook'
-
+  resources :issues
+  
+  root 'issues#index'
+  
 end
