@@ -11,6 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20190208194337) do
+
+  create_table "issues", force: :cascade do |t|
+    t.string   "action",          limit: 255
+    t.integer  "repository_id",   limit: 4
+    t.string   "repository_name", limit: 255
+    t.string   "owner_name",      limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title",           limit: 255
+    t.integer  "issue_id",        limit: 4
+  end
 
 end

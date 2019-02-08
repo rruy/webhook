@@ -1,28 +1,41 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rodando o projeto localmente:
 
-Things you may want to cover:
+execute a rake:
 
-* Ruby version
+rake db:create db:migrate  # Necessário para criar a instancia do banco de dados
 
-* System dependencies
+Use o ngrok 
 
-* Configuration
+O ngrok permite expor o pc para a web rodando localmente. 
 
-* Database creation
+Comando de intalação no Ubuntu:
 
-* Database initialization
+~> sudo snap install --edge ngrok
 
-* How to run the test suite
+Para iniciar rode o seguinte bash:
 
-* Services (job queues, cache servers, search engines, etc.)
+~> ngrok http 4567
 
-* Deployment instructions
+Com isso deve ser gerado no terminal algo como isso:
 
-* ...
+Forwarding    http://7e9ea9dc.ngrok.io -> 127.0.0.1:4567
 
+Já é possivel acessar da internet a aplicação com a seguinte url gerada acima: http://7e9ea9dc.ngrok.io
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Após esse procedimento inicialize a aplicação rails apontando para a porta 4567 para que o ngrok possa redirecionar para a nossa aplicação.
+
+~> rails s -p 4567
+
+Com isso o github já consegue realizar chamadas na aplicação quando for criada uma nova issue no repositorio.
+
+Também é possível ver a aplicação no Heroku através do seguinte link: 
+
+Aplicação:
+https://appwebhookconsumer.herokuapp.com/issues #listagem das issues via frontend
+
+API:
+https://appwebhookconsumer.herokuapp.com/api/v1/issues #listagem das issues
+
+https://appwebhookconsumer.herokuapp.com/api/v1/issues/{id}/ #para ver os detalhes de uma issue
