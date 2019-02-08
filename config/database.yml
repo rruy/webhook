@@ -28,4 +28,4 @@ production:
   reconnect: true
   pool: 15
   timeout: 50000
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
