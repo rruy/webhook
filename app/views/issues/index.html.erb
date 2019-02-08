@@ -1,0 +1,37 @@
+
+  <div>
+    <h2>
+      Issues
+    </h2>
+    <p></p>
+    <table class="table"> 
+      <thead> 
+        <tr> 
+          <th>id</th>
+          <th>action</th>
+          <th>repository_id</th>
+          <th>repository_name</th>
+          <th>owner_name</th>
+          <th>created_at</th>
+          <th>updated_at</th>
+        </tr> 
+      </thead> 
+      <tbody> 
+        <% @issues.each do |issue| %>
+          <tr> 
+            <th scope="row">
+              <%= link_to issue_path(issue), :class => 'btn btn-primary', :method => :get  do %>
+                <span>Ver</span>
+              <% end %>
+            </th> 
+            <td><%= issue.action %></td> 
+            <td><%= issue.repository_id %></td> 
+            <td><%= issue.repository_name %></td> 
+            <td><%= issue.owner_name %></td> 
+            <td><%= issue.created_at %></td> 
+            <td><%= issue.updated_at %></td> 
+          </tr> 
+        <% end %>
+      </tbody> 
+  </table>
+  </div>

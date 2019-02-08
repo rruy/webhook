@@ -1,0 +1,43 @@
+<form>
+  <div class="form-group">
+    <label for="id">id</label>
+    <input type="text" class="form-control" id="issue_id" placeholder="" value="<%= @issue.issue_id %>"  >
+  </div>
+
+  <div class="form-group">
+    <label for="id">action</label>
+    <input type="text" class="form-control" id="issue_id" placeholder="" value="<%= @issue.action %>"  >
+  </div>
+
+  <div class="form-group">
+    <label for="id">repository_id</label>
+    <input type="text" class="form-control" id="issue_id" placeholder="" value="<%= @issue.repository_id %>"  >
+  </div>
+
+  <div class="form-group">
+    <label for="id">repository_name</label>
+    <input type="text" class="form-control" id="issue_id" placeholder="" value="<%= @issue.repository_name %>"  >
+  </div>
+
+  <div class="form-group">
+    <label for="id">owner_name</label>
+    <input type="text" class="form-control" id="issue_id" placeholder="" value="<%= @issue.owner_name %>"  >
+  </div>
+
+  <div class="form-group">
+    <label for="id">created_at</label>
+    <input type="text" class="form-control" id="issue_id" placeholder="" value="<%= @issue.created_at %>"  >
+  </div>
+  
+  <div class="form-group">
+    <label for="id">updated_at</label>
+    <input type="text" class="form-control" id="issue_id" placeholder="" value="<%= @issue.updated_at %>"  >
+  </div>
+
+  <div class="form-group">
+    <%= link_to issues_path, :class => 'btn btn-primary', :method => :get  do %>
+      Voltar
+    <% end %>
+  </div>
+</form>
+

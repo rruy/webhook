@@ -1,5 +1,5 @@
 
-class IssuesController < ActionController::Base
+class IssuesController < ApplicationController
     
     def index
       @issues = Issue.all
